@@ -45,6 +45,8 @@ spec:
             value:  {{ .Values.daemonset.deployCrioConfig | quote }}
           - name: CRIO_ENDPOINT
             value:  {{ .Values.daemonset.crioEndpoint | quote }}
+          - name: MATCH_LABEL
+            value:  {{ .Values.daemonset.matchLabel }}
           - name: HOST_DIR
             value: {{ .Values.daemonset.hostDirectory }}
           - name: CORE_DIR
